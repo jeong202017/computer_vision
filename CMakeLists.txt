@@ -10,6 +10,7 @@ add_executable(assignment2 assignment_2nd.cpp)
 add_executable(assignment3-1 Assignment_3rd_1.cpp)
 add_executable(assignment3-2 Assignment_3rd_2.cpp)
 add_executable(assignment3-3 Assignment_3rd_3.cpp)
+add_executable(assignment3-4 Assignment_3rd_4.cpp)
 
 target_link_libraries(opencv_test ${OpenCV_LIBS})
 target_include_directories(opencv_test PUBLIC ${OpenCV_LIBS})
@@ -25,3 +26,6 @@ target_include_directories(assignment3-2 PUBLIC ${OpenCV_LIBS})
 
 target_link_libraries(assignment3-3 ${OpenCV_LIBS})
 target_include_directories(assignment3-3 PUBLIC ${OpenCV_LIBS})
+
+target_link_libraries(assignment3-4 ${OpenCV_LIBS})
+target_include_directories(assignment3-4 PUBLIC ${OpenCV_LIBS})

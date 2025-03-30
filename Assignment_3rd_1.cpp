@@ -8,15 +8,16 @@ int main() {
 
     Mat src= imread("/root/computer_vision/Lenna.png", 1);
 	Mat dst;
+    Mat dst2;
     Mat median_dst;
 
 	imshow("src", src);
 
 	for (int i= 1; i<61; i= i+ 2) //
 	{
-	// GaussianBlur(src, dst, Size(i, i), 0, 0);
+	GaussianBlur(src, dst, Size(i, i), 10, 8);
 
-    GaussianBlur(src, dst, Size(i, i), 3.0, 2.5);
+    GaussianBlur(src, dst2, Size(i, i), 3.0, 2.5);
 
     // 
     //     src : 원본 영상, dst : 결과영상
@@ -25,7 +26,8 @@ int main() {
     //     param2 : 시그마값을 지정하고, 비대칭 모양의 커널 윈도우를 사용할때 사용
     // 
 
-	imshow("Gaussian filter", dst);
+	imshow("Gaussian filter (3, 2.5)", dst);
+    imshow("Gaussian filter (10, 8)", dst2);
 	waitKey(1);
 	}
 

@@ -3,6 +3,7 @@
 #include <iostream>
 
 namespace fs = std::filesystem;
+using namespace cv;
 
 int main() {
     std::string folder_path = "/root/computer_vision/Lane"; // 이미지 폴더 경로
@@ -24,14 +25,22 @@ int main() {
             cv::Mat gray;
             cv::cvtColor(image, gray, cv::COLOR_BGR2GRAY);
 
+            imshow("gray",gray);
+
             // 2. 소벨 필터
             cv::Mat grad_x, grad_y;
             cv::Sobel(gray, grad_x, CV_32F, 1, 0, 3);
             cv::Sobel(gray, grad_y, CV_32F, 0, 1, 3);
 
+            imshow("sobel_x",grad_x); // 출력이 되는가?? >> 잘됨
+            imshow("sobel_y",grad_y); // ??
+
             // 3. 에지 강도, 방향
             cv::Mat magnitude, angle;
-            cv::cartToPolar(grad_x, grad_y, magnitude, angle, true);  // degree = true
+            cv::cartToPolar(grad_x, grad_y, magnitude, angle, true);  // degree = true // ????
+
+            imshow("강도??", magnitude); //출력이 되는데 왜 되는가?
+            imshow("각도??", angle);
 
             // 4. 방향 조건 (차선 방향)
             cv::Mat left_lane = (angle >= 30) & (angle <= 50);
