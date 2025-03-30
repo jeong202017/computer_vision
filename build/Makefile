@@ -156,6 +156,19 @@ assignment3-2/fast:
 .PHONY : assignment3-2/fast
 
 #=============================================================================
+# Target rules for targets named assignment3-4
+
+# Build rule for target.
+assignment3-4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment3-4
+.PHONY : assignment3-4
+
+# fast build rule for target.
+assignment3-4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-4.dir/build.make CMakeFiles/assignment3-4.dir/build
+.PHONY : assignment3-4/fast
+
+#=============================================================================
 # Target rules for targets named assignment3-1
 
 # Build rule for target.
@@ -275,6 +288,33 @@ Assignment_3rd_3.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-3.dir/build.make CMakeFiles/assignment3-3.dir/Assignment_3rd_3.cpp.s
 .PHONY : Assignment_3rd_3.cpp.s
 
+Assignment_3rd_4.o: Assignment_3rd_4.cpp.o
+
+.PHONY : Assignment_3rd_4.o
+
+# target to build an object file
+Assignment_3rd_4.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-4.dir/build.make CMakeFiles/assignment3-4.dir/Assignment_3rd_4.cpp.o
+.PHONY : Assignment_3rd_4.cpp.o
+
+Assignment_3rd_4.i: Assignment_3rd_4.cpp.i
+
+.PHONY : Assignment_3rd_4.i
+
+# target to preprocess a source file
+Assignment_3rd_4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-4.dir/build.make CMakeFiles/assignment3-4.dir/Assignment_3rd_4.cpp.i
+.PHONY : Assignment_3rd_4.cpp.i
+
+Assignment_3rd_4.s: Assignment_3rd_4.cpp.s
+
+.PHONY : Assignment_3rd_4.s
+
+# target to generate assembly for a file
+Assignment_3rd_4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-4.dir/build.make CMakeFiles/assignment3-4.dir/Assignment_3rd_4.cpp.s
+.PHONY : Assignment_3rd_4.cpp.s
+
 assignment_2nd.o: assignment_2nd.cpp.o
 
 .PHONY : assignment_2nd.o
@@ -341,6 +381,7 @@ help:
 	@echo "... assignment3-1"
 	@echo "... assignment3-2"
 	@echo "... assignment3-3"
+	@echo "... assignment3-4"
 	@echo "... opencv_test"
 	@echo "... Assignment_3rd_1.o"
 	@echo "... Assignment_3rd_1.i"
@@ -351,6 +392,9 @@ help:
 	@echo "... Assignment_3rd_3.o"
 	@echo "... Assignment_3rd_3.i"
 	@echo "... Assignment_3rd_3.s"
+	@echo "... Assignment_3rd_4.o"
+	@echo "... Assignment_3rd_4.i"
+	@echo "... Assignment_3rd_4.s"
 	@echo "... assignment_2nd.o"
 	@echo "... assignment_2nd.i"
 	@echo "... assignment_2nd.s"
