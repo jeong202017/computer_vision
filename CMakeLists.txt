@@ -5,27 +5,24 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(OpenCV REQUIRED)
 
-add_executable(opencv_test main.cpp)
-add_executable(assignment2 assignment_2nd.cpp)
-add_executable(assignment3-1 Assignment_3rd_1.cpp)
-add_executable(assignment3-2 Assignment_3rd_2.cpp)
-add_executable(assignment3-3 Assignment_3rd_3.cpp)
-add_executable(assignment3-4 Assignment_3rd_4.cpp)
+add_executable(assignment4-1 Assignment_4th_1.cpp)
+add_executable(assignment4-2 Assignment_4th_2.cpp)
+add_executable(assignment4-3 Assignment_4th_3.cpp)
+add_executable(assignment4-4 Assignment_4th_4.cpp)
+add_executable(assignment4-5 Assignment_4th_5.cpp)
 
-target_link_libraries(opencv_test ${OpenCV_LIBS})
-target_include_directories(opencv_test PUBLIC ${OpenCV_LIBS})
 
-target_link_libraries(assignment2 ${OpenCV_LIBS})
-target_include_directories(assignment2 PUBLIC ${OpenCV_LIBS})
+target_link_libraries(assignment4-1 ${OpenCV_LIBS})
+target_include_directories(assignment4-1 PUBLIC ${OpenCV_LIBS})
 
-target_link_libraries(assignment3-1 ${OpenCV_LIBS})
-target_include_directories(assignment3-1 PUBLIC ${OpenCV_LIBS})
+target_link_libraries(assignment4-2 ${OpenCV_LIBS})
+target_include_directories(assignment4-2 PUBLIC ${OpenCV_LIBS})
 
-target_link_libraries(assignment3-2 ${OpenCV_LIBS})
-target_include_directories(assignment3-2 PUBLIC ${OpenCV_LIBS})
+target_link_libraries(assignment4-3 ${OpenCV_LIBS})
+target_include_directories(assignment4-3 PUBLIC ${OpenCV_LIBS})
 
-target_link_libraries(assignment3-3 ${OpenCV_LIBS})
-target_include_directories(assignment3-3 PUBLIC ${OpenCV_LIBS})
+target_link_libraries(assignment4-4 ${OpenCV_LIBS})
+target_include_directories(assignment4-4 PUBLIC ${OpenCV_LIBS})
 
-target_link_libraries(assignment3-4 ${OpenCV_LIBS})
-target_include_directories(assignment3-4 PUBLIC ${OpenCV_LIBS})
+target_link_libraries(assignment4-5 ${OpenCV_LIBS})
+target_include_directories(assignment4-5 PUBLIC ${OpenCV_LIBS})

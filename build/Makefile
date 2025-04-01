@@ -130,244 +130,204 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named assignment3-3
+# Target rules for targets named assignment4-5
 
 # Build rule for target.
-assignment3-3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment3-3
-.PHONY : assignment3-3
+assignment4-5: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment4-5
+.PHONY : assignment4-5
 
 # fast build rule for target.
-assignment3-3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-3.dir/build.make CMakeFiles/assignment3-3.dir/build
-.PHONY : assignment3-3/fast
+assignment4-5/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-5.dir/build.make CMakeFiles/assignment4-5.dir/build
+.PHONY : assignment4-5/fast
 
 #=============================================================================
-# Target rules for targets named assignment3-2
+# Target rules for targets named assignment4-4
 
 # Build rule for target.
-assignment3-2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment3-2
-.PHONY : assignment3-2
+assignment4-4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment4-4
+.PHONY : assignment4-4
 
 # fast build rule for target.
-assignment3-2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-2.dir/build.make CMakeFiles/assignment3-2.dir/build
-.PHONY : assignment3-2/fast
+assignment4-4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-4.dir/build.make CMakeFiles/assignment4-4.dir/build
+.PHONY : assignment4-4/fast
 
 #=============================================================================
-# Target rules for targets named assignment3-4
+# Target rules for targets named assignment4-3
 
 # Build rule for target.
-assignment3-4: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment3-4
-.PHONY : assignment3-4
+assignment4-3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment4-3
+.PHONY : assignment4-3
 
 # fast build rule for target.
-assignment3-4/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-4.dir/build.make CMakeFiles/assignment3-4.dir/build
-.PHONY : assignment3-4/fast
+assignment4-3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-3.dir/build.make CMakeFiles/assignment4-3.dir/build
+.PHONY : assignment4-3/fast
 
 #=============================================================================
-# Target rules for targets named assignment3-1
+# Target rules for targets named assignment4-2
 
 # Build rule for target.
-assignment3-1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment3-1
-.PHONY : assignment3-1
+assignment4-2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment4-2
+.PHONY : assignment4-2
 
 # fast build rule for target.
-assignment3-1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-1.dir/build.make CMakeFiles/assignment3-1.dir/build
-.PHONY : assignment3-1/fast
+assignment4-2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-2.dir/build.make CMakeFiles/assignment4-2.dir/build
+.PHONY : assignment4-2/fast
 
 #=============================================================================
-# Target rules for targets named assignment2
+# Target rules for targets named assignment4-1
 
 # Build rule for target.
-assignment2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment2
-.PHONY : assignment2
+assignment4-1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment4-1
+.PHONY : assignment4-1
 
 # fast build rule for target.
-assignment2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/build
-.PHONY : assignment2/fast
+assignment4-1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-1.dir/build.make CMakeFiles/assignment4-1.dir/build
+.PHONY : assignment4-1/fast
 
-#=============================================================================
-# Target rules for targets named opencv_test
+Assignment_4th_1.o: Assignment_4th_1.cpp.o
 
-# Build rule for target.
-opencv_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencv_test
-.PHONY : opencv_test
-
-# fast build rule for target.
-opencv_test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/build
-.PHONY : opencv_test/fast
-
-Assignment_3rd_1.o: Assignment_3rd_1.cpp.o
-
-.PHONY : Assignment_3rd_1.o
+.PHONY : Assignment_4th_1.o
 
 # target to build an object file
-Assignment_3rd_1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-1.dir/build.make CMakeFiles/assignment3-1.dir/Assignment_3rd_1.cpp.o
-.PHONY : Assignment_3rd_1.cpp.o
+Assignment_4th_1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-1.dir/build.make CMakeFiles/assignment4-1.dir/Assignment_4th_1.cpp.o
+.PHONY : Assignment_4th_1.cpp.o
 
-Assignment_3rd_1.i: Assignment_3rd_1.cpp.i
+Assignment_4th_1.i: Assignment_4th_1.cpp.i
 
-.PHONY : Assignment_3rd_1.i
+.PHONY : Assignment_4th_1.i
 
 # target to preprocess a source file
-Assignment_3rd_1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-1.dir/build.make CMakeFiles/assignment3-1.dir/Assignment_3rd_1.cpp.i
-.PHONY : Assignment_3rd_1.cpp.i
+Assignment_4th_1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-1.dir/build.make CMakeFiles/assignment4-1.dir/Assignment_4th_1.cpp.i
+.PHONY : Assignment_4th_1.cpp.i
 
-Assignment_3rd_1.s: Assignment_3rd_1.cpp.s
+Assignment_4th_1.s: Assignment_4th_1.cpp.s
 
-.PHONY : Assignment_3rd_1.s
+.PHONY : Assignment_4th_1.s
 
 # target to generate assembly for a file
-Assignment_3rd_1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-1.dir/build.make CMakeFiles/assignment3-1.dir/Assignment_3rd_1.cpp.s
-.PHONY : Assignment_3rd_1.cpp.s
+Assignment_4th_1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-1.dir/build.make CMakeFiles/assignment4-1.dir/Assignment_4th_1.cpp.s
+.PHONY : Assignment_4th_1.cpp.s
 
-Assignment_3rd_2.o: Assignment_3rd_2.cpp.o
+Assignment_4th_2.o: Assignment_4th_2.cpp.o
 
-.PHONY : Assignment_3rd_2.o
+.PHONY : Assignment_4th_2.o
 
 # target to build an object file
-Assignment_3rd_2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-2.dir/build.make CMakeFiles/assignment3-2.dir/Assignment_3rd_2.cpp.o
-.PHONY : Assignment_3rd_2.cpp.o
+Assignment_4th_2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-2.dir/build.make CMakeFiles/assignment4-2.dir/Assignment_4th_2.cpp.o
+.PHONY : Assignment_4th_2.cpp.o
 
-Assignment_3rd_2.i: Assignment_3rd_2.cpp.i
+Assignment_4th_2.i: Assignment_4th_2.cpp.i
 
-.PHONY : Assignment_3rd_2.i
+.PHONY : Assignment_4th_2.i
 
 # target to preprocess a source file
-Assignment_3rd_2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-2.dir/build.make CMakeFiles/assignment3-2.dir/Assignment_3rd_2.cpp.i
-.PHONY : Assignment_3rd_2.cpp.i
+Assignment_4th_2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-2.dir/build.make CMakeFiles/assignment4-2.dir/Assignment_4th_2.cpp.i
+.PHONY : Assignment_4th_2.cpp.i
 
-Assignment_3rd_2.s: Assignment_3rd_2.cpp.s
+Assignment_4th_2.s: Assignment_4th_2.cpp.s
 
-.PHONY : Assignment_3rd_2.s
+.PHONY : Assignment_4th_2.s
 
 # target to generate assembly for a file
-Assignment_3rd_2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-2.dir/build.make CMakeFiles/assignment3-2.dir/Assignment_3rd_2.cpp.s
-.PHONY : Assignment_3rd_2.cpp.s
+Assignment_4th_2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-2.dir/build.make CMakeFiles/assignment4-2.dir/Assignment_4th_2.cpp.s
+.PHONY : Assignment_4th_2.cpp.s
 
-Assignment_3rd_3.o: Assignment_3rd_3.cpp.o
+Assignment_4th_3.o: Assignment_4th_3.cpp.o
 
-.PHONY : Assignment_3rd_3.o
+.PHONY : Assignment_4th_3.o
 
 # target to build an object file
-Assignment_3rd_3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-3.dir/build.make CMakeFiles/assignment3-3.dir/Assignment_3rd_3.cpp.o
-.PHONY : Assignment_3rd_3.cpp.o
+Assignment_4th_3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-3.dir/build.make CMakeFiles/assignment4-3.dir/Assignment_4th_3.cpp.o
+.PHONY : Assignment_4th_3.cpp.o
 
-Assignment_3rd_3.i: Assignment_3rd_3.cpp.i
+Assignment_4th_3.i: Assignment_4th_3.cpp.i
 
-.PHONY : Assignment_3rd_3.i
+.PHONY : Assignment_4th_3.i
 
 # target to preprocess a source file
-Assignment_3rd_3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-3.dir/build.make CMakeFiles/assignment3-3.dir/Assignment_3rd_3.cpp.i
-.PHONY : Assignment_3rd_3.cpp.i
+Assignment_4th_3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-3.dir/build.make CMakeFiles/assignment4-3.dir/Assignment_4th_3.cpp.i
+.PHONY : Assignment_4th_3.cpp.i
 
-Assignment_3rd_3.s: Assignment_3rd_3.cpp.s
+Assignment_4th_3.s: Assignment_4th_3.cpp.s
 
-.PHONY : Assignment_3rd_3.s
+.PHONY : Assignment_4th_3.s
 
 # target to generate assembly for a file
-Assignment_3rd_3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-3.dir/build.make CMakeFiles/assignment3-3.dir/Assignment_3rd_3.cpp.s
-.PHONY : Assignment_3rd_3.cpp.s
+Assignment_4th_3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-3.dir/build.make CMakeFiles/assignment4-3.dir/Assignment_4th_3.cpp.s
+.PHONY : Assignment_4th_3.cpp.s
 
-Assignment_3rd_4.o: Assignment_3rd_4.cpp.o
+Assignment_4th_4.o: Assignment_4th_4.cpp.o
 
-.PHONY : Assignment_3rd_4.o
+.PHONY : Assignment_4th_4.o
 
 # target to build an object file
-Assignment_3rd_4.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-4.dir/build.make CMakeFiles/assignment3-4.dir/Assignment_3rd_4.cpp.o
-.PHONY : Assignment_3rd_4.cpp.o
+Assignment_4th_4.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-4.dir/build.make CMakeFiles/assignment4-4.dir/Assignment_4th_4.cpp.o
+.PHONY : Assignment_4th_4.cpp.o
 
-Assignment_3rd_4.i: Assignment_3rd_4.cpp.i
+Assignment_4th_4.i: Assignment_4th_4.cpp.i
 
-.PHONY : Assignment_3rd_4.i
+.PHONY : Assignment_4th_4.i
 
 # target to preprocess a source file
-Assignment_3rd_4.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-4.dir/build.make CMakeFiles/assignment3-4.dir/Assignment_3rd_4.cpp.i
-.PHONY : Assignment_3rd_4.cpp.i
+Assignment_4th_4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-4.dir/build.make CMakeFiles/assignment4-4.dir/Assignment_4th_4.cpp.i
+.PHONY : Assignment_4th_4.cpp.i
 
-Assignment_3rd_4.s: Assignment_3rd_4.cpp.s
+Assignment_4th_4.s: Assignment_4th_4.cpp.s
 
-.PHONY : Assignment_3rd_4.s
+.PHONY : Assignment_4th_4.s
 
 # target to generate assembly for a file
-Assignment_3rd_4.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-4.dir/build.make CMakeFiles/assignment3-4.dir/Assignment_3rd_4.cpp.s
-.PHONY : Assignment_3rd_4.cpp.s
+Assignment_4th_4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-4.dir/build.make CMakeFiles/assignment4-4.dir/Assignment_4th_4.cpp.s
+.PHONY : Assignment_4th_4.cpp.s
 
-assignment_2nd.o: assignment_2nd.cpp.o
+Assignment_4th_5.o: Assignment_4th_5.cpp.o
 
-.PHONY : assignment_2nd.o
+.PHONY : Assignment_4th_5.o
 
 # target to build an object file
-assignment_2nd.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/assignment_2nd.cpp.o
-.PHONY : assignment_2nd.cpp.o
+Assignment_4th_5.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-5.dir/build.make CMakeFiles/assignment4-5.dir/Assignment_4th_5.cpp.o
+.PHONY : Assignment_4th_5.cpp.o
 
-assignment_2nd.i: assignment_2nd.cpp.i
+Assignment_4th_5.i: Assignment_4th_5.cpp.i
 
-.PHONY : assignment_2nd.i
-
-# target to preprocess a source file
-assignment_2nd.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/assignment_2nd.cpp.i
-.PHONY : assignment_2nd.cpp.i
-
-assignment_2nd.s: assignment_2nd.cpp.s
-
-.PHONY : assignment_2nd.s
-
-# target to generate assembly for a file
-assignment_2nd.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/assignment_2nd.cpp.s
-.PHONY : assignment_2nd.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
+.PHONY : Assignment_4th_5.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/main.cpp.i
-.PHONY : main.cpp.i
+Assignment_4th_5.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-5.dir/build.make CMakeFiles/assignment4-5.dir/Assignment_4th_5.cpp.i
+.PHONY : Assignment_4th_5.cpp.i
 
-main.s: main.cpp.s
+Assignment_4th_5.s: Assignment_4th_5.cpp.s
 
-.PHONY : main.s
+.PHONY : Assignment_4th_5.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/main.cpp.s
-.PHONY : main.cpp.s
+Assignment_4th_5.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-5.dir/build.make CMakeFiles/assignment4-5.dir/Assignment_4th_5.cpp.s
+.PHONY : Assignment_4th_5.cpp.s
 
 # Help Target
 help:
@@ -377,30 +337,26 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... assignment2"
-	@echo "... assignment3-1"
-	@echo "... assignment3-2"
-	@echo "... assignment3-3"
-	@echo "... assignment3-4"
-	@echo "... opencv_test"
-	@echo "... Assignment_3rd_1.o"
-	@echo "... Assignment_3rd_1.i"
-	@echo "... Assignment_3rd_1.s"
-	@echo "... Assignment_3rd_2.o"
-	@echo "... Assignment_3rd_2.i"
-	@echo "... Assignment_3rd_2.s"
-	@echo "... Assignment_3rd_3.o"
-	@echo "... Assignment_3rd_3.i"
-	@echo "... Assignment_3rd_3.s"
-	@echo "... Assignment_3rd_4.o"
-	@echo "... Assignment_3rd_4.i"
-	@echo "... Assignment_3rd_4.s"
-	@echo "... assignment_2nd.o"
-	@echo "... assignment_2nd.i"
-	@echo "... assignment_2nd.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... assignment4-1"
+	@echo "... assignment4-2"
+	@echo "... assignment4-3"
+	@echo "... assignment4-4"
+	@echo "... assignment4-5"
+	@echo "... Assignment_4th_1.o"
+	@echo "... Assignment_4th_1.i"
+	@echo "... Assignment_4th_1.s"
+	@echo "... Assignment_4th_2.o"
+	@echo "... Assignment_4th_2.i"
+	@echo "... Assignment_4th_2.s"
+	@echo "... Assignment_4th_3.o"
+	@echo "... Assignment_4th_3.i"
+	@echo "... Assignment_4th_3.s"
+	@echo "... Assignment_4th_4.o"
+	@echo "... Assignment_4th_4.i"
+	@echo "... Assignment_4th_4.s"
+	@echo "... Assignment_4th_5.o"
+	@echo "... Assignment_4th_5.i"
+	@echo "... Assignment_4th_5.s"
 .PHONY : help
 
 

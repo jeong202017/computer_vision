@@ -72,12 +72,11 @@ CMAKE_BINARY_DIR = /root/computer_vision/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/assignment3-3.dir/all
-all: CMakeFiles/assignment3-2.dir/all
-all: CMakeFiles/assignment3-4.dir/all
-all: CMakeFiles/assignment3-1.dir/all
-all: CMakeFiles/assignment2.dir/all
-all: CMakeFiles/opencv_test.dir/all
+all: CMakeFiles/assignment4-5.dir/all
+all: CMakeFiles/assignment4-4.dir/all
+all: CMakeFiles/assignment4-3.dir/all
+all: CMakeFiles/assignment4-2.dir/all
+all: CMakeFiles/assignment4-1.dir/all
 
 .PHONY : all
 
@@ -87,176 +86,148 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/assignment3-3.dir/clean
-clean: CMakeFiles/assignment3-2.dir/clean
-clean: CMakeFiles/assignment3-4.dir/clean
-clean: CMakeFiles/assignment3-1.dir/clean
-clean: CMakeFiles/assignment2.dir/clean
-clean: CMakeFiles/opencv_test.dir/clean
+clean: CMakeFiles/assignment4-5.dir/clean
+clean: CMakeFiles/assignment4-4.dir/clean
+clean: CMakeFiles/assignment4-3.dir/clean
+clean: CMakeFiles/assignment4-2.dir/clean
+clean: CMakeFiles/assignment4-1.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/assignment3-3.dir
+# Target rules for target CMakeFiles/assignment4-5.dir
 
 # All Build rule for target.
-CMakeFiles/assignment3-3.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-3.dir/build.make CMakeFiles/assignment3-3.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-3.dir/build.make CMakeFiles/assignment3-3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/computer_vision/build/CMakeFiles --progress-num=7,8 "Built target assignment3-3"
-.PHONY : CMakeFiles/assignment3-3.dir/all
+CMakeFiles/assignment4-5.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-5.dir/build.make CMakeFiles/assignment4-5.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-5.dir/build.make CMakeFiles/assignment4-5.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/computer_vision/build/CMakeFiles --progress-num=9,10 "Built target assignment4-5"
+.PHONY : CMakeFiles/assignment4-5.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/assignment3-3.dir/rule: cmake_check_build_system
+CMakeFiles/assignment4-5.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/computer_vision/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/assignment3-3.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/assignment4-5.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/computer_vision/build/CMakeFiles 0
-.PHONY : CMakeFiles/assignment3-3.dir/rule
+.PHONY : CMakeFiles/assignment4-5.dir/rule
 
 # Convenience name for target.
-assignment3-3: CMakeFiles/assignment3-3.dir/rule
+assignment4-5: CMakeFiles/assignment4-5.dir/rule
 
-.PHONY : assignment3-3
+.PHONY : assignment4-5
 
 # clean rule for target.
-CMakeFiles/assignment3-3.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-3.dir/build.make CMakeFiles/assignment3-3.dir/clean
-.PHONY : CMakeFiles/assignment3-3.dir/clean
+CMakeFiles/assignment4-5.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-5.dir/build.make CMakeFiles/assignment4-5.dir/clean
+.PHONY : CMakeFiles/assignment4-5.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/assignment3-2.dir
+# Target rules for target CMakeFiles/assignment4-4.dir
 
 # All Build rule for target.
-CMakeFiles/assignment3-2.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-2.dir/build.make CMakeFiles/assignment3-2.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-2.dir/build.make CMakeFiles/assignment3-2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/computer_vision/build/CMakeFiles --progress-num=5,6 "Built target assignment3-2"
-.PHONY : CMakeFiles/assignment3-2.dir/all
+CMakeFiles/assignment4-4.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-4.dir/build.make CMakeFiles/assignment4-4.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-4.dir/build.make CMakeFiles/assignment4-4.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/computer_vision/build/CMakeFiles --progress-num=7,8 "Built target assignment4-4"
+.PHONY : CMakeFiles/assignment4-4.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/assignment3-2.dir/rule: cmake_check_build_system
+CMakeFiles/assignment4-4.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/computer_vision/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/assignment3-2.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/assignment4-4.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/computer_vision/build/CMakeFiles 0
-.PHONY : CMakeFiles/assignment3-2.dir/rule
+.PHONY : CMakeFiles/assignment4-4.dir/rule
 
 # Convenience name for target.
-assignment3-2: CMakeFiles/assignment3-2.dir/rule
+assignment4-4: CMakeFiles/assignment4-4.dir/rule
 
-.PHONY : assignment3-2
+.PHONY : assignment4-4
 
 # clean rule for target.
-CMakeFiles/assignment3-2.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-2.dir/build.make CMakeFiles/assignment3-2.dir/clean
-.PHONY : CMakeFiles/assignment3-2.dir/clean
+CMakeFiles/assignment4-4.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-4.dir/build.make CMakeFiles/assignment4-4.dir/clean
+.PHONY : CMakeFiles/assignment4-4.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/assignment3-4.dir
+# Target rules for target CMakeFiles/assignment4-3.dir
 
 # All Build rule for target.
-CMakeFiles/assignment3-4.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-4.dir/build.make CMakeFiles/assignment3-4.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-4.dir/build.make CMakeFiles/assignment3-4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/computer_vision/build/CMakeFiles --progress-num=9,10 "Built target assignment3-4"
-.PHONY : CMakeFiles/assignment3-4.dir/all
+CMakeFiles/assignment4-3.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-3.dir/build.make CMakeFiles/assignment4-3.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-3.dir/build.make CMakeFiles/assignment4-3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/computer_vision/build/CMakeFiles --progress-num=5,6 "Built target assignment4-3"
+.PHONY : CMakeFiles/assignment4-3.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/assignment3-4.dir/rule: cmake_check_build_system
+CMakeFiles/assignment4-3.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/computer_vision/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/assignment3-4.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/assignment4-3.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/computer_vision/build/CMakeFiles 0
-.PHONY : CMakeFiles/assignment3-4.dir/rule
+.PHONY : CMakeFiles/assignment4-3.dir/rule
 
 # Convenience name for target.
-assignment3-4: CMakeFiles/assignment3-4.dir/rule
+assignment4-3: CMakeFiles/assignment4-3.dir/rule
 
-.PHONY : assignment3-4
+.PHONY : assignment4-3
 
 # clean rule for target.
-CMakeFiles/assignment3-4.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-4.dir/build.make CMakeFiles/assignment3-4.dir/clean
-.PHONY : CMakeFiles/assignment3-4.dir/clean
+CMakeFiles/assignment4-3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-3.dir/build.make CMakeFiles/assignment4-3.dir/clean
+.PHONY : CMakeFiles/assignment4-3.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/assignment3-1.dir
+# Target rules for target CMakeFiles/assignment4-2.dir
 
 # All Build rule for target.
-CMakeFiles/assignment3-1.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-1.dir/build.make CMakeFiles/assignment3-1.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-1.dir/build.make CMakeFiles/assignment3-1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/computer_vision/build/CMakeFiles --progress-num=3,4 "Built target assignment3-1"
-.PHONY : CMakeFiles/assignment3-1.dir/all
+CMakeFiles/assignment4-2.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-2.dir/build.make CMakeFiles/assignment4-2.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-2.dir/build.make CMakeFiles/assignment4-2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/computer_vision/build/CMakeFiles --progress-num=3,4 "Built target assignment4-2"
+.PHONY : CMakeFiles/assignment4-2.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/assignment3-1.dir/rule: cmake_check_build_system
+CMakeFiles/assignment4-2.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/computer_vision/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/assignment3-1.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/assignment4-2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/computer_vision/build/CMakeFiles 0
-.PHONY : CMakeFiles/assignment3-1.dir/rule
+.PHONY : CMakeFiles/assignment4-2.dir/rule
 
 # Convenience name for target.
-assignment3-1: CMakeFiles/assignment3-1.dir/rule
+assignment4-2: CMakeFiles/assignment4-2.dir/rule
 
-.PHONY : assignment3-1
+.PHONY : assignment4-2
 
 # clean rule for target.
-CMakeFiles/assignment3-1.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment3-1.dir/build.make CMakeFiles/assignment3-1.dir/clean
-.PHONY : CMakeFiles/assignment3-1.dir/clean
+CMakeFiles/assignment4-2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-2.dir/build.make CMakeFiles/assignment4-2.dir/clean
+.PHONY : CMakeFiles/assignment4-2.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/assignment2.dir
+# Target rules for target CMakeFiles/assignment4-1.dir
 
 # All Build rule for target.
-CMakeFiles/assignment2.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/computer_vision/build/CMakeFiles --progress-num=1,2 "Built target assignment2"
-.PHONY : CMakeFiles/assignment2.dir/all
+CMakeFiles/assignment4-1.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-1.dir/build.make CMakeFiles/assignment4-1.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-1.dir/build.make CMakeFiles/assignment4-1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/computer_vision/build/CMakeFiles --progress-num=1,2 "Built target assignment4-1"
+.PHONY : CMakeFiles/assignment4-1.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/assignment2.dir/rule: cmake_check_build_system
+CMakeFiles/assignment4-1.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/computer_vision/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/assignment2.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/assignment4-1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/computer_vision/build/CMakeFiles 0
-.PHONY : CMakeFiles/assignment2.dir/rule
+.PHONY : CMakeFiles/assignment4-1.dir/rule
 
 # Convenience name for target.
-assignment2: CMakeFiles/assignment2.dir/rule
+assignment4-1: CMakeFiles/assignment4-1.dir/rule
 
-.PHONY : assignment2
-
-# clean rule for target.
-CMakeFiles/assignment2.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/clean
-.PHONY : CMakeFiles/assignment2.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/opencv_test.dir
-
-# All Build rule for target.
-CMakeFiles/opencv_test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/computer_vision/build/CMakeFiles --progress-num=11,12 "Built target opencv_test"
-.PHONY : CMakeFiles/opencv_test.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/opencv_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/computer_vision/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/opencv_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/computer_vision/build/CMakeFiles 0
-.PHONY : CMakeFiles/opencv_test.dir/rule
-
-# Convenience name for target.
-opencv_test: CMakeFiles/opencv_test.dir/rule
-
-.PHONY : opencv_test
+.PHONY : assignment4-1
 
 # clean rule for target.
-CMakeFiles/opencv_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/clean
-.PHONY : CMakeFiles/opencv_test.dir/clean
+CMakeFiles/assignment4-1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4-1.dir/build.make CMakeFiles/assignment4-1.dir/clean
+.PHONY : CMakeFiles/assignment4-1.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
