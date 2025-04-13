@@ -1,6 +1,0 @@
-/computer_vision/src/Assignment_5th/build/CMakeFiles/assignment5-1.dir
-/computer_vision/src/Assignment_5th/build/CMakeFiles/assignment5-2.dir
-/computer_vision/src/Assignment_5th/build/CMakeFiles/assignment5-3.dir
-/computer_vision/src/Assignment_5th/build/CMakeFiles/assignment5-4.dir
-/computer_vision/src/Assignment_5th/build/CMakeFiles/edit_cache.dir
-/computer_vision/src/Assignment_5th/build/CMakeFiles/rebuild_cache.dir
