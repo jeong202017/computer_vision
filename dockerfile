@@ -27,6 +27,21 @@ RUN apt-get update && apt-get upgrade -y && \
     python3-opencv \
     && rm -rf /var/lib/apt/lists/*
 
+# GUI (OpenCV imshow 등) 관련 라이브러리
+RUN apt-get update && apt-get install -y \
+    libgtk2.0-dev \
+    libcanberra-gtk* \
+    libx11-xcb1 \
+    libxcomposite-dev \
+    libxcursor-dev \
+    libxdamage-dev \
+    libxfixes-dev \
+    libxi-dev \
+    libxtst-dev \
+    libnss3 \
+    libxrandr-dev \
+    x11-apps
+
 # pip 최신화 및 기본 패키지 설치
 RUN python3 -m pip install --upgrade pip && \
     pip install \
