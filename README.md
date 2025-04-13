@@ -1,1 +1,3 @@
-# computer_vision
+# computer
+
+한기대 컴퓨터 비전 수업 과제 기록 레포지토리

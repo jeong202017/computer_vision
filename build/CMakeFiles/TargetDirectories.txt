@@ -1,0 +1,7 @@
+/root/computer_vision/build/CMakeFiles/rebuild_cache.dir
+/root/computer_vision/build/CMakeFiles/assignment4-5.dir
+/root/computer_vision/build/CMakeFiles/assignment4-4.dir
+/root/computer_vision/build/CMakeFiles/assignment4-3.dir
+/root/computer_vision/build/CMakeFiles/edit_cache.dir
+/root/computer_vision/build/CMakeFiles/assignment4-2.dir
+/root/computer_vision/build/CMakeFiles/assignment4-1.dir
