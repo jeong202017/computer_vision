@@ -1,0 +1,8 @@
+/root/computer_vision/src/Assignment_6th/build/CMakeFiles/rebuild_cache.dir
+/root/computer_vision/src/Assignment_6th/build/CMakeFiles/edit_cache.dir
+/root/computer_vision/src/Assignment_6th/build/CMakeFiles/assignment6-6.dir
+/root/computer_vision/src/Assignment_6th/build/CMakeFiles/assignment6-5.dir
+/root/computer_vision/src/Assignment_6th/build/CMakeFiles/assignment6-4.dir
+/root/computer_vision/src/Assignment_6th/build/CMakeFiles/assignment6-3.dir
+/root/computer_vision/src/Assignment_6th/build/CMakeFiles/assignment6-2.dir
+/root/computer_vision/src/Assignment_6th/build/CMakeFiles/assignment6-1.dir
