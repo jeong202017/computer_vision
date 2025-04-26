@@ -1,19 +1,17 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
-#include <fstream>  // for CSV file output
 #include <string>
-#include <iomanip>  // for std::setw
-#include <sstream>  // for std::stringstream
+#include <iomanip>
+#include <sstream>
 #include <vector>
 
 using namespace cv;
 using namespace std;
 
-// 블록매칭과 결과 그리기 함수
-pair<Mat, double> trackTemplate(const Mat& frame, const Mat& template_img, int method)
+// 블록매칭 + 매칭 박스 그리기
+Mat matchTemplateAndDraw(Mat frame, const Mat& template_img, int method)
 {
     Mat result(frame.rows - template_img.rows + 1, frame.cols - template_img.cols + 1, CV_32FC1);
-
     matchTemplate(frame, template_img, result, method);
 
     double minVal, maxVal;
@@ -25,21 +23,14 @@ pair<Mat, double> trackTemplate(const Mat& frame, const Mat& template_img, int m
     else
         matchLoc = maxLoc;
 
-    // 결과 프레임 만들기
-    Mat display = frame.clone();  
-    rectangle(display, matchLoc, Point(matchLoc.x + template_img.cols, matchLoc.y + template_img.rows), Scalar(0, 0, 255), 2);
-
-    // (표시용 프레임, 매칭 점수) 반환
-    if (method == TM_SQDIFF || method == TM_SQDIFF_NORMED)
-        return { display, minVal };
-    else
-        return { display, maxVal };
+    rectangle(frame, matchLoc, Point(matchLoc.x + template_img.cols, matchLoc.y + template_img.rows), Scalar(0, 0, 255), 2);
+    return frame;
 }
 
 string getFilename(int frame_num)
 {
     stringstream ss;
-    ss << setw(5) << setfill('0') << frame_num << ".jpg"; // 00100.jpg 형식
+    ss << setw(5) << setfill('0') << frame_num << ".jpg"; 
     return ss.str();
 }
 
@@ -51,13 +42,21 @@ int main()
         return -1;
     }
 
-    int method = TM_CCOEFF_NORMED;  // 사용할 블록매칭 기준
-    vector<double> match_scores;    // 매칭 점수 기록용
+    vector<int> methods = {
+        TM_SQDIFF, TM_SQDIFF_NORMED,
+        TM_CCORR, TM_CCORR_NORMED,
+        TM_CCOEFF, TM_CCOEFF_NORMED
+    };
+    vector<string> method_names = {
+        "SQDIFF", "SQDIFF_NORMED",
+        "CCORR", "CCORR_NORMED",
+        "CCOEFF", "CCOEFF_NORMED"
+    };
 
-    // 결과 영상 저장 설정
-    Size videoSize(640, 480);  // 프레임 크기 (네 상황에 맞춰 조정)
-    VideoWriter writer("tracking_result.mp4", VideoWriter::fourcc('m', 'p', '4', 'v'), 30, videoSize);
+    Size single_frame_size(320, 240); // 각 작은 화면 크기
+    Size video_size(single_frame_size.width * 3, single_frame_size.height * 2); // 전체 영상 크기 (960x480)
 
+    VideoWriter writer("tracking_result_multi6_show.mp4", VideoWriter::fourcc('m', 'p', '4', 'v'), 30, video_size);
     if (!writer.isOpened()) {
         cerr << "❌ 비디오 파일을 열 수 없습니다." << endl;
         return -1;
@@ -77,39 +76,34 @@ int main()
             continue;
         }
 
-        // 매칭 결과 프레임 생성
-        auto [result_frame, score] = trackTemplate(frame, template_car, method);
+        vector<Mat> results;
 
-        match_scores.push_back(score);
+        for (size_t i = 0; i < methods.size(); ++i) {
+            Mat frame_copy = frame.clone();
+            Mat matched_frame = matchTemplateAndDraw(frame_copy, template_car, methods[i]);
+            resize(matched_frame, matched_frame, single_frame_size); // 작은 사이즈로 resize
 
-        // 결과 프레임에 스코어 텍스트 추가
-        stringstream ss;
-        ss << fixed << setprecision(4) << "Score: " << score;
-        putText(result_frame, ss.str(), Point(10, 30), FONT_HERSHEY_SIMPLEX, 1.0, Scalar(0, 255, 0), 2);
+            putText(matched_frame, method_names[i], Point(10, 30),
+                    FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 0), 2);
 
-        // 결과 프레임을 동영상으로 저장
-        Mat resized_frame;
-        resize(result_frame, resized_frame, videoSize);  // 크기 맞추기
-        writer.write(resized_frame);
+            results.push_back(matched_frame);
+        }
 
-        // (화면에도 잠깐 보여줄 수 있음)
-        imshow("Tracking", resized_frame);
+        // 2행 3열로 배치
+        Mat top_row, bottom_row, final_display;
+        hconcat(vector<Mat>{results[0], results[1], results[2]}, top_row);
+        hconcat(vector<Mat>{results[3], results[4], results[5]}, bottom_row);
+        vconcat(top_row, bottom_row, final_display);
+
+        writer.write(final_display);
+        imshow("Tracking Multi-6 Result", final_display);
+
         if (waitKey(1) == 27) break; // ESC 누르면 중단
     }
 
     destroyAllWindows();
     writer.release();
 
-    // 매칭 점수 CSV로 저장
-    ofstream file("match_scores.csv");
-    file << "Frame,Score\n";
-    for (size_t i = 0; i < match_scores.size(); ++i) {
-        file << (101 + i) << "," << match_scores[i] << "\n";
-    }
-    file.close();
-
-    cout << "✅ tracking_result.mp4 저장 완료!" << endl;
-    cout << "✅ match_scores.csv 저장 완료!" << endl;
-
+    cout << "✅ tracking_result_multi6_show.mp4 저장 완료!" << endl;
     return 0;
 }
