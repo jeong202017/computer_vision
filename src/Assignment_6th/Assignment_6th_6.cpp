@@ -1,14 +1,15 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <string>
-#include <iomanip>  // std::setw, std::setfill
-#include <sstream>  // std::stringstream
+#include <iomanip>
+#include <sstream>
+#include <vector>
 
 using namespace cv;
 using namespace std;
 
 // 블록매칭과 결과 그리기 함수
-Point trackTemplate(Mat& frame, const Mat& template_img, int method)
+Mat trackTemplate(const Mat& frame, const Mat& template_img, int method)
 {
     Mat result(frame.rows - template_img.rows + 1, frame.cols - template_img.cols + 1, CV_32FC1);
 
@@ -23,15 +24,17 @@ Point trackTemplate(Mat& frame, const Mat& template_img, int method)
     else
         matchLoc = maxLoc;
 
-    rectangle(frame, matchLoc, Point(matchLoc.x + template_img.cols, matchLoc.y + template_img.rows), Scalar(0, 0, 255), 2);
+    Mat display;
+    cvtColor(frame, display, COLOR_BGR2RGB); // 보기 좋게 색 변경
+    rectangle(display, matchLoc, Point(matchLoc.x + template_img.cols, matchLoc.y + template_img.rows), Scalar(255, 0, 0), 2);
 
-    return matchLoc;
+    return display;
 }
 
 string getFilename(int frame_num)
 {
     stringstream ss;
-    ss << setw(5) << setfill('0') << frame_num << ".jpg";  // 예: 00100.jpg
+    ss << setw(5) << setfill('0') << frame_num << ".jpg";
     return ss.str();
 }
 
@@ -44,11 +47,9 @@ int main()
         return -1;
     }
 
-    // 매칭 방법 선택
-    int method = TM_CCOEFF_NORMED;
-
-    // 결과 저장용
-    VideoWriter writer("tracking_result_from_images.mp4", VideoWriter::fourcc('m', 'p', '4', 'v'), 30, Size(640, 480));
+    // 매칭 방법 리스트
+    vector<int> methods = { TM_SQDIFF, TM_SQDIFF_NORMED, TM_CCORR, TM_CCORR_NORMED, TM_CCOEFF, TM_CCOEFF_NORMED };
+    vector<string> method_names = { "SQDIFF", "SQDIFF_NORMED", "CCORR", "CCORR_NORMED", "CCOEFF", "CCOEFF_NORMED" };
 
     for (int frame_num = 101; frame_num <= 260; ++frame_num) {
         string filepath = "/root/computer_vision/img/Lane2/" + getFilename(frame_num);
@@ -64,17 +65,27 @@ int main()
             continue;
         }
 
-        // 템플릿 매칭 및 추적
-        trackTemplate(frame, template_car, method);
+        // 모든 매칭 방법 결과를 저장할 벡터
+        vector<Mat> results;
 
-        // 결과 출력
-        imshow("Tracking", frame);
-        writer.write(frame);
+        for (size_t i = 0; i < methods.size(); ++i) {
+            Mat result_img = trackTemplate(frame, template_car, methods[i]);
+            putText(result_img, method_names[i], Point(10, 30), FONT_HERSHEY_SIMPLEX, 1.0, Scalar(0, 255, 0), 2); // 방법 이름 표시
+            results.push_back(result_img);
+        }
 
-        if (waitKey(30) == 27) break; // ESC 누르면 중단
+        // 결과를 가로로 붙이기 (3개씩)
+        Mat top, bottom, final_display;
+        hconcat(vector<Mat>{results[0], results[1], results[2]}, top);
+        hconcat(vector<Mat>{results[3], results[4], results[5]}, bottom);
+        vconcat(top, bottom, final_display);
+
+        // 결과 보여주기
+        imshow("Tracking Comparison", final_display);
+
+        if (waitKey(30) == 27) break; // ESC 누르면 종료
     }
 
-    writer.release();
     destroyAllWindows();
     return 0;
 }
