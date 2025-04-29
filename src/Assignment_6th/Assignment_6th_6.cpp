@@ -56,7 +56,7 @@ int main()
     Size single_frame_size(320, 240); // 각 작은 화면 크기
     Size video_size(single_frame_size.width * 3, single_frame_size.height * 2); // 전체 영상 크기 (960x480)
 
-    VideoWriter writer("tracking_result_multi6_show.mp4", VideoWriter::fourcc('m', 'p', '4', 'v'), 30, video_size);
+    VideoWriter writer("tracking_result_multi6_show.avi", VideoWriter::fourcc('X', 'V', 'I', 'D'), 30, video_size);
     if (!writer.isOpened()) {
         cerr << "❌ 비디오 파일을 열 수 없습니다." << endl;
         return -1;

@@ -26,7 +26,6 @@ int main()
     // Input arr : , Output arr :, maxValue :, adaptivemethod : threshold algorithm, thresholdType : 이진화 결과값
 	// blockSize : 블록 크기(홀수여야 함 - 이유가 뭐였더라), C 보정 상수 : (양수) - 보정 상수 빼기,(음수) - 보정 상수 더하기
 	// 질문 사항 : 보정 상수가 양수일 때 빼는 이유
-	// 30이 
     
 	imshow("7-Original", src);
 	imshow("7-Global Thresholding", bin1);
