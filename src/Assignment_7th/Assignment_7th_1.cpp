@@ -29,7 +29,7 @@ void detectAndSave(const string& imagePath, const string& outputDir) {
     for (int blockSize : blockSizes) {
         for (int ksize : kSizes) {
             for (double k : kValues) {
-                Mat dst, dstNorm;
+                Mat dst;
                 cornerHarris(gray, dst, blockSize, ksize, k);
 
                 // 정규화
@@ -37,8 +37,7 @@ void detectAndSave(const string& imagePath, const string& outputDir) {
                 normalize(dst, dst_norm, 0, 255, NORM_MINMAX, CV_32FC1);
                 convertScaleAbs(dst_norm, dst_norm_u8);  // 시각화용
 
-                dilate(dst, dst, Mat());
-
+                // 시각화용 결과 이미지: 원본 위에 코너점 표시
                 Mat result = src.clone();
                 double maxVal;
                 minMaxLoc(dst, nullptr, &maxVal);
@@ -50,11 +49,18 @@ void detectAndSave(const string& imagePath, const string& outputDir) {
                     }
                 }
 
-                char filename[300];
-                snprintf(filename, sizeof(filename), "%s/%s_bs%d_ks%d_k%.2f.png",
+                // 결과 저장
+                char result_name[300], norm_name[300];
+                snprintf(result_name, sizeof(result_name), "%s/%s_bs%d_ks%d_k%.2f.png",
                          outputDir.c_str(), baseName.c_str(), blockSize, ksize, k);
-                imwrite(filename, result);
-                cout << "[+] Saved: " << filename << endl;
+                snprintf(norm_name, sizeof(norm_name), "%s/%s_bs%d_ks%d_k%.2f_norm.png",
+                         outputDir.c_str(), baseName.c_str(), blockSize, ksize, k);
+
+                imwrite(result_name, result);
+                imwrite(norm_name, dst_norm_u8);
+
+                cout << "[+] Saved: " << result_name << " (with corners)" << endl;
+                cout << "[+] Saved: " << norm_name << " (normalized)" << endl;
             }
         }
     }
