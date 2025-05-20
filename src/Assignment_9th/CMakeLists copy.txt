@@ -1,0 +1,34 @@
+cmake_minimum_required(VERSION 3.10)
+project(opencv_test)
+
+set(CMAKE_CXX_STANDARD 17)
+
+find_package(OpenCV REQUIRED)
+
+add_executable(assignment9-1 Assignment_9th_1.cpp)
+add_executable(assignment9-2 Assignment_9th_2.cpp)
+add_executable(assignment9-3 Assignment_9th_3.cpp)
+add_executable(assignment9-4 Assignment_9th_4.cpp)
+add_executable(image_editer image_slider.cpp)
+add_executable(assignment9-5 Assignment_9th_5.cpp)
+
+target_link_libraries(assignment9-1 ${OpenCV_LIBS})
+target_include_directories(assignment9-1 PUBLIC ${OpenCV_LIBS})
+
+target_link_libraries(assignment9-2 ${OpenCV_LIBS})
+target_include_directories(assignment9-2 PUBLIC ${OpenCV_LIBS})
+
+target_link_libraries(assignment9-3 ${OpenCV_LIBS})
+target_include_directories(assignment9-3 PUBLIC ${OpenCV_LIBS})
+
+target_link_libraries(assignment9-4 ${OpenCV_LIBS})
+target_include_directories(assignment9-4 PUBLIC ${OpenCV_LIBS})
+
+target_link_libraries(assignment9-5 ${OpenCV_LIBS})
+target_include_directories(assignment9-5 ${OpenCV_LIBS})
+
+target_link_libraries(image_editer ${OpenCV_LIBS})
+target_include_directories(image_editer PUBLIC ${OpenCV_LIBS})
+
+# target_link_libraries(assignment7-2 ${OpenCV_LIBS})
+# target_include_directories(assignment7-2 PUBLIC ${OpenCV_LIBS})

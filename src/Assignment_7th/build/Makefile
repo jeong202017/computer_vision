@@ -130,19 +130,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named assignment7-2
-
-# Build rule for target.
-assignment7-2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment7-2
-.PHONY : assignment7-2
-
-# fast build rule for target.
-assignment7-2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment7-2.dir/build.make CMakeFiles/assignment7-2.dir/build
-.PHONY : assignment7-2/fast
-
-#=============================================================================
 # Target rules for targets named assignment7-1
 
 # Build rule for target.
@@ -182,33 +169,6 @@ Assignment_7th_1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment7-1.dir/build.make CMakeFiles/assignment7-1.dir/Assignment_7th_1.cpp.s
 .PHONY : Assignment_7th_1.cpp.s
 
-Assignment_7th_2.o: Assignment_7th_2.cpp.o
-
-.PHONY : Assignment_7th_2.o
-
-# target to build an object file
-Assignment_7th_2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment7-2.dir/build.make CMakeFiles/assignment7-2.dir/Assignment_7th_2.cpp.o
-.PHONY : Assignment_7th_2.cpp.o
-
-Assignment_7th_2.i: Assignment_7th_2.cpp.i
-
-.PHONY : Assignment_7th_2.i
-
-# target to preprocess a source file
-Assignment_7th_2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment7-2.dir/build.make CMakeFiles/assignment7-2.dir/Assignment_7th_2.cpp.i
-.PHONY : Assignment_7th_2.cpp.i
-
-Assignment_7th_2.s: Assignment_7th_2.cpp.s
-
-.PHONY : Assignment_7th_2.s
-
-# target to generate assembly for a file
-Assignment_7th_2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment7-2.dir/build.make CMakeFiles/assignment7-2.dir/Assignment_7th_2.cpp.s
-.PHONY : Assignment_7th_2.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -218,13 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... assignment7-1"
-	@echo "... assignment7-2"
 	@echo "... Assignment_7th_1.o"
 	@echo "... Assignment_7th_1.i"
 	@echo "... Assignment_7th_1.s"
-	@echo "... Assignment_7th_2.o"
-	@echo "... Assignment_7th_2.i"
-	@echo "... Assignment_7th_2.s"
 .PHONY : help
 
 

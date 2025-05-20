@@ -10,5 +10,5 @@ add_executable(assignment7-1 Assignment_7th_1.cpp)
 target_link_libraries(assignment7-1 ${OpenCV_LIBS})
 target_include_directories(assignment7-1 PUBLIC ${OpenCV_LIBS})
 
-target_link_libraries(assignment7-2 ${OpenCV_LIBS})
-target_include_directories(assignment7-2 PUBLIC ${OpenCV_LIBS})
+# target_link_libraries(assignment7-2 ${OpenCV_LIBS})
+# target_include_directories(assignment7-2 PUBLIC ${OpenCV_LIBS})
